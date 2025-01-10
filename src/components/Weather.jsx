@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Weather.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 import search_icon from '../assets/search.png';
 import location_icon from '../assets/location.png'; // GPS ikonka
 import clear_icon from '../assets/clear.png';
@@ -7,12 +8,11 @@ import humidity_icon from '../assets/humidity.png';
 import wind_icon from '../assets/wind.png';
 import { Toaster, toast } from 'react-hot-toast';
 import { Skeleton } from '@mui/material'; // Import Skeleton from MUI
-import 'react-loading-skeleton/dist/skeleton.css'; // Import Skeleton styles if needed
+
 
 const Weather = () => {
     const inputRef = useRef();
     const [weatherData, setWeatherData] = useState(null);
-    console.log(weatherData);
 
     const [loading, setLoading] = useState(false); // Track loading state
 
@@ -77,7 +77,6 @@ const Weather = () => {
 
             const response = await fetch(url);
             const data = await response.json();
-            console.log(data);
 
             if (!response.ok) {
                 toast.error(data.message);

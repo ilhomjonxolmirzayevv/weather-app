@@ -97,3 +97,57 @@
     margin-top: 20px;
   }
   
+  /* Media Queries */
+
+/* For small screens (phones) */
+@media (max-width: 480px) {
+    .search-bar input {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .temperature {
+        font-size: 28px;
+    }
+
+    .location {
+        font-size: 16px;
+    }
+
+    .weather-data .col {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .weather-data p {
+        font-size: 14px;
+    }
+
+    .weather-data span {
+        font-size: 10px;
+    }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 768px) {
+    .search-bar input {
+        width: 65%;
+    }
+
+    .weather-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .weather-data .col {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+}
